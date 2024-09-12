@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class Main{
   public static void main(String[]args){
+    //URL for these exercises: https://www.w3resource.com/java-exercises/basic/index.php#editorr
+
+    
     //Exercise 1
     // Scanner scanner = new Scanner(System.in);
     // System.out.println("Enter your name");
