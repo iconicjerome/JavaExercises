@@ -2,6 +2,17 @@ import java.util.Scanner;
 
 
 public class Main{
+  final static double circleArea(int circleRadius){
+    double area = Math.PI *Math.pow(circleRadius, 2);
+    System.out.println("The area of the circle is "+ area);
+    return area;
+  }
+
+  final static double circlePerimeter(int circleRadius ){
+    double perimeter = 2 * Math.PI * circleRadius;
+    System.out.println("The perimeter of the circle is "+ perimeter );
+    return perimeter;
+  }
   public static void main(String[]args){
     //URL for these exercises: https://www.w3resource.com/java-exercises/basic/index.php#editorr
 
@@ -52,15 +63,23 @@ public class Main{
     // scanner.close();
     
     //Exercise 7
-    System.out.println("Enter number: ");
+    // System.out.println("Enter number: ");
     //user the Scanner class to receive user input
-    Scanner scanner = new Scanner(System.in);
-    int userNumber = scanner.nextInt();
+    // Scanner scanner = new Scanner(System.in);
+    // int userNumber = scanner.nextInt();
     //use a for loop to run a loop till the multiplication table gets to 10
-    for(int i = 1; i<=10;i++){
-      int multiply = userNumber *  i;
-      System.out.println(userNumber+ " X " + i + " = " + multiply);
-    }
+    // for(int i = 1; i<=10;i++){
+    //   int multiply = userNumber *  i;
+    //   System.out.println(userNumber+ " X " + i + " = " + multiply);
+    // }
+    // scanner.close();
+
+    //Exercise 8
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter Radius: ");
+    int radius = scanner.nextInt();
+    circleArea(radius);
+    circlePerimeter(radius);
     scanner.close();
   }
 
