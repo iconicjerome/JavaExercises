@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 
 public class Main{
-  final static double circleArea(int circleRadius){
+  final static double circleArea(double circleRadius){
     double area = Math.PI *Math.pow(circleRadius, 2);
     System.out.println("The area of the circle is "+ area);
     return area;
   }
 
-  final static double circlePerimeter(int circleRadius ){
+  final static double circlePerimeter(double circleRadius ){
     double perimeter = 2 * Math.PI * circleRadius;
     System.out.println("The perimeter of the circle is "+ perimeter );
     return perimeter;
@@ -77,7 +77,7 @@ public class Main{
     //Exercise 8
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter Radius: ");
-    int radius = scanner.nextInt();
+    double radius = scanner.nextDouble();
     circleArea(radius);
     circlePerimeter(radius);
     scanner.close();
