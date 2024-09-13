@@ -1,3 +1,4 @@
+import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 
 
@@ -30,6 +31,30 @@ public class Main{
     System.out.println("The average is "+ average);
     return average;
     
+  }
+  //Methods for Exercise 10
+  final static double getAreaForRectangle(){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter length: ");
+    double userNum1 = scanner.nextDouble();
+    System.out.println("Enter width");
+    double userNum2 = scanner.nextDouble();
+    //formula for calculating area
+    double area = userNum1 * userNum2;
+    System.out.println("The area of the rectangle is: "+ area);
+    return area;
+  }
+  final static double getPerimeterForRectangle(){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter length: ");
+    double userNum1 = scanner.nextDouble();
+    System.out.println("Enter width");
+    double userNum2 = scanner.nextDouble();
+    scanner.close();
+    //formula for calculating perimeter
+    double perimeter = 2*(userNum1+userNum2);
+    System.out.println("The perimeter of the rectangle is: "+ perimeter);
+    return perimeter;
   }
   public static void main(String[]args){
     //URL for these exercises: https://www.w3resource.com/java-exercises/basic/index.php#editorr
@@ -101,7 +126,20 @@ public class Main{
     // scanner.close();
 
     //Exercise 9
-    getAverage();
+    // getAverage();
+
+    //Exercise 10
+    // getAreaForRectangle();
+    // getPerimeterForRectangle();
+
+    //Exercise 11: The Switcheroo
+    int a = 1;
+    int b = 2;
+    System.out.println("Here a is: "+ a + " and b is: "+ b);
+    int c = a;
+    a =b;
+    b = c;
+    System.out.println("The switcheroo happens here! \n Now a is: "+ a + " and b is: "+ b);
   }
   
 }
