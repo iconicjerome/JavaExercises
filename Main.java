@@ -1,6 +1,4 @@
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
-
 
 public class Main{
   //Methods for exercise 8
@@ -55,6 +53,27 @@ public class Main{
     double perimeter = 2*(userNum1+userNum2);
     System.out.println("The perimeter of the rectangle is: "+ perimeter);
     return perimeter;
+  }
+  final static String compareNumbers(){
+    Scanner scanner = new Scanner(System.in);
+     System.out.println("Enter first number: ");
+   double num1 = scanner.nextDouble();
+     System.out.println("Enter second number: ");
+   double  num2 = scanner.nextDouble();
+     scanner.close();
+     String result;
+      if(num1 == num2){
+          result = "" + num1 +" is equal to " + num2;
+          System.out.println(result);
+      }else if(num1 < num2){
+        result = "" + num1 +" is less than " + num2;
+        System.out.println(result);
+      }else{
+        result = "" + num1 +" is greater than " + num2;
+        System.out.println(result);
+      }
+      return result;
+     
   }
   public static void main(String[]args){
     //URL for these exercises: https://www.w3resource.com/java-exercises/basic/index.php#editorr
@@ -133,13 +152,16 @@ public class Main{
     // getPerimeterForRectangle();
 
     //Exercise 11: The Switcheroo
-    int a = 1;
-    int b = 2;
-    System.out.println("Here a is: "+ a + " and b is: "+ b);
-    int c = a;
-    a =b;
-    b = c;
-    System.out.println("The switcheroo happens here! \n Now a is: "+ a + " and b is: "+ b);
+    // int a = 1;
+    // int b = 2;
+    // System.out.println("Here a is: "+ a + " and b is: "+ b);
+    // int c = a;
+    // a =b;
+    // b = c;
+    // System.out.println("The switcheroo happens here! \n Now a is: "+ a + " and b is: "+ b);
+
+    //Exercise 12 write a Java program to compare two numbers
+    compareNumbers();
   }
   
 }
